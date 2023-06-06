@@ -1,7 +1,7 @@
 import { useSetRecoilState } from "recoil";
 import { useForm } from "react-hook-form";
 
-import { travelsState } from "../recoil";
+import { travelsState } from "../recoil/atoms";
 import { CategoriesType, TravelType } from "../types/travel";
 import styled from "styled-components";
 

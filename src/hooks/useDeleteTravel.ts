@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil";
 
-import { travelsState } from "../recoil";
+import { travelsState } from "../recoil/atoms";
 
 const useDeleteTravel = () => {
   const setTravels = useSetRecoilState(travelsState);

@@ -1,21 +1,18 @@
 import { useRecoilValue } from "recoil";
 
-import { travelsState } from "../recoil";
 import { CategoriesType } from "../types/travel";
 import { useChagneCategory } from "../hooks";
+import { likeTravlesSelector } from "../recoil/selectors";
 
 const LikeCountries = () => {
-  const travels = useRecoilValue(travelsState);
   const handleChangeCategory = useChagneCategory();
 
-  const favoriteTravles = travels.filter(
-    travel => travel.category === CategoriesType.like
-  );
+  const likeTravles = useRecoilValue(likeTravlesSelector);
 
   return (
     <>
       <h2>내가 좋아하는 나라들</h2>
-      {favoriteTravles.map(travel => {
+      {likeTravles.map(travel => {
         return (
           <div key={travel.travelId}>
             <span>{travel.countryName}</span>

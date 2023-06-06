@@ -1,16 +1,12 @@
 import { useRecoilValue } from "recoil";
 
-import { travelsState } from "../recoil";
 import { CategoriesType } from "../types/travel";
 import { useChagneCategory } from "../hooks";
+import { HaveBeenToTravlesSelector } from "../recoil/selectors";
 
 const HaveBeenToCountries = () => {
-  const travels = useRecoilValue(travelsState);
   const handleChangeCategory = useChagneCategory();
-
-  const HaveBeenToTravles = travels.filter(
-    travel => travel.category === CategoriesType.haveBeenTo
-  );
+  const HaveBeenToTravles = useRecoilValue(HaveBeenToTravlesSelector);
 
   return (
     <>
