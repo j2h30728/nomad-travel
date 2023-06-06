@@ -1,9 +1,10 @@
-export interface Travel {
+export interface TravelType {
   countryName: string;
-  categories: Categories;
+  category: CategoriesType;
+  travelId: number;
 }
-export enum Categories {
+export enum CategoriesType {
   "wantToGo" = "wantToGo",
-  "hasbenn" = "HasBenn",
+  "haveBeenTo" = "haveBeenTo",
   "like" = "like",
 }

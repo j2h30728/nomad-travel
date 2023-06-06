@@ -1,5 +1,17 @@
-import TravelList from "./components/TravelList";
+import {
+  HaveBeenToCountries,
+  CreateTravelForm,
+  WantToGoCountries,
+  LikeCountries,
+} from "./components";
 
 export default function App() {
-  return <TravelList />;
+  return (
+    <main>
+      <CreateTravelForm />
+      <WantToGoCountries />
+      <HaveBeenToCountries />
+      <LikeCountries />
+    </main>
+  );
 }
