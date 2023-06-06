@@ -21,7 +21,7 @@ const LikeCountries = () => {
                 handleChangeCategory({
                   countryName: travel.countryName,
                   travelId: travel.travelId,
-                  category: CategoriesType.haveBeenTo,
+                  category: CategoriesType.HAVE_BEEN_TO,
                 })
               }>
               👎

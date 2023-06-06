@@ -9,7 +9,7 @@ export const travelState = atom<TravelType>({
   key: "travelState",
   default: {
     countryName: "",
-    category: CategoriesType.wantToGo,
+    category: CategoriesType.WAMT_TO_GO,
     travelId: 0,
   },
 });

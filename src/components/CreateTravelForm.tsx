@@ -21,7 +21,7 @@ const CreateTravelForm = () => {
       ...prev,
       {
         countryName,
-        category: CategoriesType.wantToGo,
+        category: CategoriesType.WAMT_TO_GO,
         travelId: Date.now(),
       },
     ]);

@@ -20,7 +20,7 @@ const HaveBeenToCountries = () => {
                 handleChangeCategory({
                   countryName: travel.countryName,
                   travelId: travel.travelId,
-                  category: CategoriesType.like,
+                  category: CategoriesType.LIKE,
                 })
               }>
               👍
@@ -30,7 +30,7 @@ const HaveBeenToCountries = () => {
                 handleChangeCategory({
                   countryName: travel.countryName,
                   travelId: travel.travelId,
-                  category: CategoriesType.wantToGo,
+                  category: CategoriesType.WAMT_TO_GO,
                 })
               }>
               ❌
