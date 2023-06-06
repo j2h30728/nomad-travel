@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 
 import { travelsState } from "../recoil";
 import { CategoriesType, TravelType } from "../types/travel";
+import styled from "styled-components";
 
 const CreateTravelForm = () => {
   const setTravels = useSetRecoilState(travelsState);
@@ -31,10 +32,10 @@ const CreateTravelForm = () => {
       <h2>내가 가고싶은 나라들</h2>
       <form onSubmit={handleSubmit(handleInvalid)}>
         <input
-          {...register("countryName", { required: "입력해주세요." })}
+          {...register("countryName", { required: "😡 필수입니다!!!!" })}
           placeholder="이름"
         />
-        <p>{errors.countryName?.message}</p>
+        <ErrorMessage>{errors.countryName?.message}</ErrorMessage>
         <button>가자!</button>
       </form>
     </>
@@ -42,3 +43,7 @@ const CreateTravelForm = () => {
 };
 
 export default CreateTravelForm;
+
+const ErrorMessage = styled.p`
+  color: red;
+`;
