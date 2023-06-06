@@ -15,7 +15,7 @@ const CreateTravelForm = () => {
     formState: { errors },
   } = useForm<TravelType>();
 
-  const handleInvalid = ({ countryName }: TravelType) => {
+  const handleSubmitTravel = ({ countryName }: TravelType) => {
     setValue("countryName", "");
     setTravels(prev => [
       ...prev,
@@ -30,7 +30,7 @@ const CreateTravelForm = () => {
   return (
     <>
       <h2>내가 가고싶은 나라들</h2>
-      <form onSubmit={handleSubmit(handleInvalid)}>
+      <form onSubmit={handleSubmit(handleSubmitTravel)}>
         <input
           {...register("countryName", { required: "😡 필수입니다!!!!" })}
           placeholder="이름"

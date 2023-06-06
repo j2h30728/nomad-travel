@@ -6,7 +6,7 @@ import { wantToGoTravelsSelector } from "../recoil/selectors";
 
 const WantToGoCountries = () => {
   const handleChangeCategory = useChagneCategory();
-  const handleDeleteTravel = useDeleteTravel();
+  const handleRemoveTravel = useDeleteTravel();
 
   const wantToGoTravels = useRecoilValue(wantToGoTravelsSelector);
 
@@ -26,7 +26,7 @@ const WantToGoCountries = () => {
               }>
               ✅
             </button>
-            <button onClick={() => handleDeleteTravel(travel.travelId)}>
+            <button onClick={() => handleRemoveTravel(travel.travelId)}>
               🗑️
             </button>
           </div>
