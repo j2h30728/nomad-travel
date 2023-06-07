@@ -2,7 +2,7 @@ import { useSetRecoilState } from "recoil";
 
 import { travelsState } from "../recoil/atoms";
 
-const useDeleteTravel = () => {
+const useRemoveTravel = () => {
   const setTravels = useSetRecoilState(travelsState);
   const handleRemoveTravel = (travelId: number) => {
     return setTravels(prev =>
@@ -12,4 +12,4 @@ const useDeleteTravel = () => {
   return handleRemoveTravel;
 };
 
-export default useDeleteTravel;
+export default useRemoveTravel;

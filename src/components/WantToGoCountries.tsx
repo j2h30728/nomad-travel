@@ -1,12 +1,12 @@
 import { useRecoilValue } from "recoil";
 
 import { CategoriesType } from "../types/travel";
-import { useChagneCategory, useDeleteTravel } from "../hooks";
+import { useChagneCategory, useRemoveTravel } from "../hooks";
 import { wantToGoTravelsSelector } from "../recoil/selectors";
 
 const WantToGoCountries = () => {
   const handleChangeCategory = useChagneCategory();
-  const handleRemoveTravel = useDeleteTravel();
+  const handleRemoveTravel = useRemoveTravel();
 
   const wantToGoTravels = useRecoilValue(wantToGoTravelsSelector);
 
